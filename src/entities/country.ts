@@ -2,6 +2,7 @@ import { Field, ObjectType } from "type-graphql";
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 import { ICountry } from "../interfaces/entities/ICountry";
 import { Length, MinLength } from "class-validator";
+import { continentsCodes } from "../enums/continentsCodes";
 
 @ObjectType()
 @Entity()
@@ -28,4 +29,12 @@ export class Country implements ICountry {
     @Column({ unique: true })
     @Length(1, 1, { message: "You have to provide exactly 1 emoji." })
     emoji!: string;
+
+    @Field()
+    @Column({
+        type: "varchar",
+        length: 2,
+        enum: continentsCodes,
+    })
+    continentCode!: continentsCodes;
 }
