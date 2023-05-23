@@ -1,0 +1,26 @@
+{
+    "name": "20230523_checkpoint_back",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "compile": "tsc",
+        "start": "npm run compile && node ./dist/index.js",
+        "dev": "ts-node-dev src/index.ts"
+    },
+    "dependencies": {
+        "apollo-server": "^3.11.1",
+        "class-validator": "^0.14.0",
+        "reflect-metadata": "^0.1.13",
+        "sqlite3": "^5.1.4",
+        "ts-node-dev": "^2.0.0",
+        "type-graphql": "^1.1.1",
+        "typeorm": "^0.3.12"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    }
+}
